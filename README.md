@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+## SetUp : React + Firebase & Router Set Up
+
+## Authentication : Using Firebase Auth, Login Form & Creating Account & Social Login
+
 # npm i --save Firebase
 
 # firebase.js --> const
