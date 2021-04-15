@@ -1,5 +1,13 @@
 # Getting Started with Create React App
 
+## 1. debugging : data collection from 'tweets' should match with your data id in Firebase --> IMPORTANT to know which collection you are saving the data.
+
+## 2. debugging : syntax from Tweet.js & Auth.js when input, you should put the onSubmit (e) => { e.preventDefault(); (target: {{value},} = e;
+
+## 3. update, delete or whatever changes happens in Snapshot\*\*\*
+
+## 4. setEditing(false); will update the browser after edit \*\*\*
+
 ## SetUp : React + Firebase & Router Set Up
 
 ## Authentication : Using Firebase Auth, Login Form & Creating Account & Social Login
