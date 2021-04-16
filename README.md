@@ -26,4 +26,4 @@
 
 # preventDefault() function onSubmit prevent the re-rendering automatically. instead it order the function to be executed.
 
-## presistance gives you ways how you will remember your users.
+## npm i uuid : when you want to create a unique id.
