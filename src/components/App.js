@@ -3,6 +3,8 @@ import {useEffect} from 'react';
 import AppRouter from "components/Router";
 import {authService} from "fbase";
 
+
+
 function App() {
   const [init, setInit] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -36,7 +38,7 @@ function App() {
   return (
   <>
   {init ? <AppRouter refreshUser={refreshUser} isLoggedIn = {isLoggedIn} userObj={userObj}/>: "Initializing.."}
-  <footer>&copy; {new Date().getFullYear()} ReactTweet</footer>
+  {/* <footer>&copy; {new Date().getFullYear()} ReactTweet</footer> */}
   </>);
 }
 

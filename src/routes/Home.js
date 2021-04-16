@@ -16,7 +16,7 @@ const Home = ({ userObj }) => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
         <div>
         <TweetFactory 
          userObj = { userObj }

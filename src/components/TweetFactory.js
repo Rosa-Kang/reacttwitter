@@ -1,6 +1,8 @@
 import React, { useState }from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { storageService, dbService } from 'fbase';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 
  const TweetFactory =({userObj}) => {
@@ -49,27 +51,41 @@ import { storageService, dbService } from 'fbase';
   const onClear =() => setAttach(null);
 
     return (
-    <form onSubmit={onSubmit}>
+    <form className="factoryForm" onSubmit={onSubmit}>
+      <div 
+      className="factoryInput__container"
+      >
       <input
+          className="factoryInput__input"
           value={tweet}
           onChange={onChange}
           type="text"
           placeholder="What's on your mind?"
           maxLength={120}
         />
+        <input className="factoryInput__arrow" type="submit" value="Tweet" />  
+        </div>
+        <label for="attach-file" className="factoryInput__label">
+        <span>Add photos</span>
+        <FontAwesomeIcon icon={faPlus} />
+      </label>
         <input
+          id="attach-file"
           type="file"
           accept="image/*"
           onChange={onFileChange}
-        />
-        <input type="submit" value="Tweet" />
+        /> 
         {attach && (
-        <div>
+        <div className="factoryForm__attachment">
         <img 
         src={attach} 
-        width="50px" 
-        height="50px"/>
-        <button onClick={onClear}>Clear</button>
+        style={{
+          background: attach,
+        }}/>
+        <div className="factoryForm__clear" onClick={onClear}>
+            <span>Remove</span>
+            <FontAwesomeIcon icon={faTimes} />
+          </div>
         </div>
         )}
       </form>
