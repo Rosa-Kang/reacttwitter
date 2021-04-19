@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/github.io/reacttwitter/static/css/main.c83ae0a8.chunk.css",
+    "main.js": "/github.io/reacttwitter/static/js/main.b2de1910.chunk.js",
+    "main.js.map": "/github.io/reacttwitter/static/js/main.b2de1910.chunk.js.map",
+    "runtime-main.js": "/github.io/reacttwitter/static/js/runtime-main.ba6acf03.js",
+    "runtime-main.js.map": "/github.io/reacttwitter/static/js/runtime-main.ba6acf03.js.map",
+    "static/js/2.4d9150d4.chunk.js": "/github.io/reacttwitter/static/js/2.4d9150d4.chunk.js",
+    "static/js/2.4d9150d4.chunk.js.map": "/github.io/reacttwitter/static/js/2.4d9150d4.chunk.js.map",
+    "index.html": "/github.io/reacttwitter/index.html",
+    "static/css/main.c83ae0a8.chunk.css.map": "/github.io/reacttwitter/static/css/main.c83ae0a8.chunk.css.map",
+    "static/js/2.4d9150d4.chunk.js.LICENSE.txt": "/github.io/reacttwitter/static/js/2.4d9150d4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ba6acf03.js",
+    "static/js/2.4d9150d4.chunk.js",
+    "static/css/main.c83ae0a8.chunk.css",
+    "static/js/main.b2de1910.chunk.js"
+  ]
+}
