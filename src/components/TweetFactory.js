@@ -1,6 +1,6 @@
-import React, { useState }from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import { storageService, dbService } from 'fbase';
+import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+import { storageService, dbService } from "fbase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -8,7 +8,11 @@ import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
  const TweetFactory =({userObj}) => {
   const [tweet, setTweet] = useState("");  
   const [attach, setAttach] = useState("");
+  
   const onSubmit = async (event) => {
+    if (tweet === "") {
+      return;
+    }
     event.preventDefault();
     let fileUrl = "";
     if (attach !== "") {
@@ -30,13 +34,16 @@ import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
   };
 
   const onChange = (e) => {
-        const {target:{value},
+        const {
+          target:{value},
         } = e;
         setTweet(value);
     }
 
   const onFileChange =(e) => {
-    const {target: {files},} = e;
+    const {
+      target: {files},
+    } = e;
     const theFile = files[0];
     const reader = new FileReader();
     reader.onloadend = (finished) => {
@@ -48,13 +55,11 @@ import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
     reader.readAsDataURL(theFile);
   }
 
-  const onClear =() => setAttach(null);
+  const onClear =() => setAttach("");
 
     return (
     <form className="factoryForm" onSubmit={onSubmit}>
-      <div 
-      className="factoryInput__container"
-      >
+      <div  className="factoryInput__container" >
       <input
           className="factoryInput__input"
           value={tweet}
@@ -74,13 +79,16 @@ import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
           type="file"
           accept="image/*"
           onChange={onFileChange}
+          style={{
+          opacity: 0,
+        }}
         /> 
         {attach && (
         <div className="factoryForm__attachment">
         <img 
         src={attach} 
         style={{
-          background: attach,
+          backgroundImage: attach,
         }}/>
         <div className="factoryForm__clear" onClick={onClear}>
             <span>Remove</span>

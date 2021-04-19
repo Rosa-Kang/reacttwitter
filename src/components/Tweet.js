@@ -1,5 +1,5 @@
-import { dbService, storageService } from 'fbase';
-import React, {useState} from 'react';
+import React, { useState } from "react";
+import { dbService, storageService } from "fbase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 
@@ -45,17 +45,19 @@ const Tweet =( {tweetObj, isOwner}) => {
     onChange={onChange}
     value={newTweet} 
     type="text" 
-    placeholder="what is new-Tweet?"
+    placeholder="Edit your Tweet"
     />
     <input
     value="Update Tweet"
     type="submit"
+    className="formBtn"
     />
     </form>
     <span onClick={toggleEditing} className="formBtn cancelBtn">
             Cancel
     </span>
-    </>):
+    </>
+    ): (
     <>
     <h4>{tweetObj.text}</h4>
     {tweetObj.fileUrl && <img src={tweetObj.fileUrl} width='50px' height='50px'/>}
@@ -70,7 +72,7 @@ const Tweet =( {tweetObj, isOwner}) => {
     </div>
     )}
     </>
-    }
+    )}
     </div>
     );
 }

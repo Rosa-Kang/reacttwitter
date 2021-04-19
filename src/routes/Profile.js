@@ -52,7 +52,13 @@ return (
  placeholder="DisplayName"
  value={newDisplayName}
  />
-<input type="submit" value="Update Profile" />
+<input    
+type="submit"
+value="Update Profile"
+className="formBtn"
+style={{
+      marginTop: 10,
+}}/>
 </form>
 <span className="formBtn cancelBtn logOut"  onClick={onLogOutClick}>
   Log Out
