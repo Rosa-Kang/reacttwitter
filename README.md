@@ -9,7 +9,7 @@ Table of Contents
 2. Used Tech
 3. About the Project
 4. Structure & Features
-5. What I learned
+5. Problem Solvign & Learning
 6. Reference
 ---
 
@@ -34,6 +34,7 @@ Table of Contents
 [DEMO LINK](https://rosa-kang.github.io/reacttwitter/)
 
 ---
+
 
 **4. Debugging & Problem Solvings
 
