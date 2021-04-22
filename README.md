@@ -37,6 +37,7 @@ Table of Contents
 
 
 **4. Debugging & Problem Solvings
+---
 
 |Debugging|Solution|
 |:--:|:--:|
